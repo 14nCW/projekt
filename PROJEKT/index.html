@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="style.css">
+    <title>TicTacToe</title>
+</head>
+
+<body>
+    <div class="popup" id="popup-1">
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">X</div>
+            <thead>
+                <div class="container" id="container">
+                    <form action="#">
+                        <h1>Create Account!</h1>
+                        <input type="email" placeholder="xyz@email.com" required>
+                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Surname" required>
+                        <input type="password" placeholder="Password" required>
+                        <button>Sign up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Sign in!</h1>
+                        <input type="email" placeholder="xyz@email.com" required>
+                        <input type="password" placeholder="Password" required>
+                        <button>Sign in</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>
+                            Please sign in with your personal information, and enjoi!
+                        </p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello stranger!</h1>
+                        <p>
+                            Enter your information to begin your journey! test
+                        </p>
+                        <button class="ghost" id="signUn">Sign Up</button>
+                    </div>
+                </div>
+            </thead>
+        </div>
+        <button onclick="togglePopup()" class="first-button"><img src="resource/zdjecie1.ico" width="50px"></button>
+    </div>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

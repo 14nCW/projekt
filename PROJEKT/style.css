@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%) scale(0);
+    width: 600px;
+    height: 450px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 8px;
+    background: #262626;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 1;
+}
+
+.first-button {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    background: #141414;
+    box-shadow: 10px 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10pxrgba(0, 0, 0, 0.22);
+    transition: box-shadow .35s ease !important;
+    outline: none;
+}
+
+.first-button:active {
+    background: linear-gradient(145deg, #222222, #292929);
+    box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
+    border: none;
+}
+
+
+/* Popup active */
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.container {}
