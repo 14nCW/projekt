@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 * {
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -27,6 +28,18 @@ p {
     margin: 20px 0 30px;
 }
 
+.sidebar {
+    background: rgb(20, 20, 20);
+    position: fixed;
+    left: 0;
+    width: 100px;
+    height: 110%;
+}
+
+.sidebar ul {
+    height: 50%;
+}
+
 .popup .content {
     position: absolute;
     top: 50%;
@@ -51,7 +64,7 @@ p {
     border: none;
     position: absolute;
     top: 10%;
-    left: 5%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #141414;
     box-shadow: 10px 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10pxrgba(0, 0, 0, 0.22);
@@ -73,4 +86,10 @@ p {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.container {}
+.form-container button {
+    font-size: 14px;
+    font-weight: 200px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
