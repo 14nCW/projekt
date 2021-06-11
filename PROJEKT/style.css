@@ -4,6 +4,9 @@
     list-style: none;
 }
 
+
+/* core */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: rgb(37, 37, 37);
@@ -28,25 +31,33 @@ p {
     margin: 20px 0 30px;
 }
 
-.sidebar {
+
+/* left */
+
+.leftbar {
     background: rgb(20, 20, 20);
     position: fixed;
-    left: 0;
+    left: 20%;
     width: 100px;
     height: 110%;
 }
 
-.sidebar ul {
+.leftbar ul {
     height: 50%;
 }
+
+.rightbar {
+    position: relative;
+}
+
+
+/* Popup */
 
 .popup .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 150%) scale(0);
-    width: 600px;
-    height: 450px;
     z-index: 2;
     text-align: center;
     border-radius: 8px;
@@ -78,9 +89,6 @@ p {
     border: none;
 }
 
-
-/* Popup active */
-
 .popup.active .content {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
@@ -92,4 +100,12 @@ p {
     line-height: 20px;
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
+}
+
+
+/* game */
+
+.tictactoe-container {
+    text-align: center;
+    align-items: center;
 }
