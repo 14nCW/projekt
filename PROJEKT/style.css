@@ -37,8 +37,8 @@ p {
 .rightbar .footer {
     position: absolute;
     justify-content: center;
-    top: 98%;
-    left: 50%;
+    left: 25%;
+    bottom: -10%;
     text-emphasis-color: rgb(37, 37, 37);
 }
 
