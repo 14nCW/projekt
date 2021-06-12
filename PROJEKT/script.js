@@ -41,8 +41,6 @@ const tiles = () => {
     if (topLeft && topLeft == topMiddle == topRight) {
 
     }
-
-
 }
 
 const CellClick = (e) => {
