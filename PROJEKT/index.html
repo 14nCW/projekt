@@ -8,13 +8,23 @@
 </head>
 
 <body>
-    <div class="leftbar">
+    <div class="modeDiv">
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+            <i class="darkmode"></i>
+            <i class="lightmode"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+
+    <div class="leftbar" id="leftbar">
         <ul>
             <li>
                 <button class="first-button" id="first-button"><img src="resource/zdjecie1.ico" width="50px"></button>
             </li>
         </ul>
     </div>
+
     <div class="rightbar">
         <div class="popup" id="popup-1">
             <div class="content">
@@ -38,7 +48,7 @@
                             <button>Sign in</button>
                         </form>
                     </div>
-                    <div class="overlay-container">
+                    <div class="overlay-container" id="overlay-sign">
                         <div class="overlay-panel overlay-left">
                             <h1>Welcome Back!</h1>
                             <p>
@@ -51,7 +61,7 @@
                             <p>
                                 Enter your information to begin your journey!
                             </p>
-                            <button class="ghost" id="signUn">Sign Up</button>
+                            <button class="ghost" id="signUp">Sign Up</button>
                         </div>
                     </div>
                 </thead>
@@ -75,20 +85,20 @@
             </div>
             <div class="reset">Reset game</div>
             <div class="game-grid">
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
-                <div class="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
+                <div class="game-cell" id="game-cell"></div>
             </div>
         </div>
         <!-- <h6><?php echo(date("Y-m-d"))?></h6> -->
         <h6 class="footer">Copyright © 2021 Made By Ian Canals-Wąsik s23538</h6>
     </div>
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
