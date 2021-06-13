@@ -10,19 +10,19 @@ function togglePopup() {
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
-	document.body.classList.toggle('light');
+    document.body.classList.toggle('light');
 });
 
 chk.addEventListener('change', () => {
-	document.getElementById('leftbar').classList.toggle('light');
+    document.getElementById('leftbar').classList.toggle('light');
 });
 
 const numCells = document.querySelectorAll('.game-cell');
 
 for (const numCell of numCells) {
     chk.addEventListener('change', () => {
-    numCell.classList.toggle('light');
-});
+        numCell.classList.toggle('light');
+    });
 }
 
 
@@ -72,16 +72,21 @@ const handleWin = (letter) => {
 };
 
 const checkGameStatus = () => {
-    
-    const topLeft = cellDivs[0].classList[cellDivs[0].classList.length-1];
-    const topMiddle = cellDivs[1].classList[cellDivs[0].classList.length-1];
-    const topRight = cellDivs[2].classList[cellDivs[0].classList.length-1];
-    const middleLeft = cellDivs[3].classList[cellDivs[0].classList.length-1];
-    const middleMiddle = cellDivs[4].classList[cellDivs[0].classList.length-1];
-    const middleRight = cellDivs[5].classList[cellDivs[0].classList.length-1];
-    const bottomLeft = cellDivs[6].classList[cellDivs[0].classList.length-1];
-    const bottomMiddle = cellDivs[7].classList[cellDivs[0].classList.length-1];
-    const bottomRight = cellDivs[8].classList[cellDivs[0].classList.length-1];
+    if (cellDivs[0].classList.length > 2) {
+        var number = 2
+    } else {
+        var number = 1
+    }
+
+    const topLeft = cellDivs[0].classList[number];
+    const topMiddle = cellDivs[1].classList[number];
+    const topRight = cellDivs[2].classList[number];
+    const middleLeft = cellDivs[3].classList[number];
+    const middleMiddle = cellDivs[4].classList[number];
+    const middleRight = cellDivs[5].classList[number];
+    const bottomLeft = cellDivs[6].classList[number];
+    const bottomMiddle = cellDivs[7].classList[number];
+    const bottomRight = cellDivs[8].classList[number];
 
     // check winner
     if (topLeft && topLeft === topMiddle && topLeft === topRight) {
@@ -154,7 +159,7 @@ const handleCellClick = (e) => {
     document.getElementById("chk").disabled = true;
     const classList = e.target.classList;
 
-    if (!gameIsLive || classList[1] === 'x' || classList[1] === 'o') {
+    if (!gameIsLive || classList[classList.length - 1] === 'x' || classList[classList.length - 1] === 'o') {
         return;
     }
 

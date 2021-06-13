@@ -32,10 +32,11 @@ p {
     margin: 20px 0 30px;
 }
 
+
 /* template */
 
 body.light {
-	background: #8d8d8d;
+    background: #8d8d8d;
 }
 
 .leftbar.light {
@@ -51,48 +52,48 @@ body.light {
 }
 
 .checkbox {
-	opacity: 0;
-	position: absolute;
+    opacity: 0;
+    position: absolute;
 }
 
 .label {
-	background-color: #111;
-	border-radius: 50px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-	position: relative;
-	height: 26px;
-	width: 50px;
-	transform: scale(1.5);
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
 }
 
 .label .ball {
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 22px;
-	width: 22px;
-	transform: translateX(0px);
-	transition: transform 0.2s linear;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
 }
 
-.checkbox:checked + .label .ball {
-	transform: translateX(24px);
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
 }
-
 
 .darkmode {
-	color: #f1c40f;
+    color: #f1c40f;
 }
 
 .lightmode {
-	color: #f39c12;
+    color: #f39c12;
 }
+
 
 /* footer */
 
@@ -102,76 +103,6 @@ body.light {
     left: 25%;
     bottom: -10%;
     text-emphasis-color: rgb(37, 37, 37);
-}
-
-
-/* left */
-
-.leftbar {
-    background: rgb(20, 20, 20);
-    position: fixed;
-    left: 0;
-    width: 100px;
-    height: 110%;
-    transition: background 0.2s linear;
-}
-
-.leftbar ul {
-    height: 50%;
-}
-
-
-
-/* Popup */
-
-.first-button {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: none;
-    box-shadow: 10px 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10pxrgba(0, 0, 0, 0.22);
-    transition: box-shadow .35s ease !important;
-    outline: none;
-}
-
-.first-button:active {
-    background: linear-gradient(145deg, #222222, #292929);
-    box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
-    border: none;
-}
-
-.popup .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 150%) scale(0);
-    z-index: 2;
-    text-align: center;
-    border-radius: 8px;
-    background: #262626;
-    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22);
-    z-index: 1;
-}
-
-.popup.active .content {
-    transition: all 300ms ease-in-out;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.form-container button {
-    border-radius: 20px;
-    border-color: rgb(255,75,43);
-    background-color: rgb(255,75,43);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: capitalize;
 }
 
 
@@ -190,7 +121,6 @@ body.light {
     grid-gap: 15px;
     margin-top: 50px;
     transition: background 0.2s linear;
-
 }
 
 .game-cell {
