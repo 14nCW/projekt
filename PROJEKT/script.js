@@ -20,14 +20,6 @@ for (const numCell of numCells) {
 });
 }
 
-
-
-//===========================================================LOGGING==================================================================\\
-
-
-
-
-
 //===========================================================GAME LOGIC==================================================================\\
 
 
@@ -52,7 +44,7 @@ const handleWin = (letter) => {
     if (letter === 'x') {
         statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
     } else {
-        statusDiv.innerHTML = `<span>${letterToSymbol(letter)} has won!</span>`;
+        statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
     }
 };
 
@@ -144,7 +136,7 @@ const handleCellClick = (e) => {
     document.getElementById("chk").disabled = true;
     const classList = e.target.classList;
 
-    if (!gameIsLive || classList[classList.length - 1] === 'x' || classList[classList.length - 1] === 'o') {
+    if (!gameIsLive || classList[number] === 'x' || classList[number] === 'o') {
         return;
     }
 
