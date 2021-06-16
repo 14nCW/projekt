@@ -13,6 +13,6 @@ if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['surname']) 
         echo mysqli_error($dbConnection);
     }
     mysqli_close($dbConnection);
-    header("Location: /PROJEKT/index.php");
+    header("Location: index.php");
     exit();
-}
+}?>

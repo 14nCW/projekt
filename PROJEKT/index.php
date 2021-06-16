@@ -10,23 +10,23 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if ($mojeQuery > 0) {
         session_start();
         $_SESSION['zalogowano'] = true;
-        header("Location: /PROJEKT/MainPage.php");
+        header("Location: tytulowa.php");
         
     } else {
         $_SESSION['zalogowano'] = false;
-        header("Location: /PROJEKT/index.php");
+        header("Location: index.php");
     }
     
     mysqli_close($dbConnection);
     exit();
-} ?>
+}?>
 
 <!doctype html>
 <html lang="pl">
 
 <head>
     <meta charset="utf8">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="tes.css">
     <title>TicTacToe</title>
 </head>
 
@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 <?php
                 session_start();
                 if (isset($_SESSION['zalogowano'])) {
-                    header("Location: /PROJEKT/MainPage.php");
+                    header("Location: tytulowa.php");
                 } else {
                     echo '
                     <div class="form-container sign-up-container">
@@ -79,4 +79,5 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             </thead>
         </div>
     </div>
+    <script src="script_log.js"></script>
 </body>

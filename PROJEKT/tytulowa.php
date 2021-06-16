@@ -13,9 +13,10 @@
         <label class="label" for="chk">
             <i class="darkmode"></i>
             <i class="lightmode"></i>
-            <div class="ball"></div>
+            <div class="ball">
+            </div>
         </label>
-    </div>
+    </div class="logoutButton">
     <form action="logout.php" method="POST">
         <button>Log Out!</button>
     </form>

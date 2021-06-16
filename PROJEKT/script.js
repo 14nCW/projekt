@@ -1,9 +1,4 @@
-document.getElementById("first-button").onclick = togglePopup;
 
-function togglePopup() {
-    document.getElementById("popup-1").classList.toggle("active");
-    console.log("hello")
-}
 
 //===========================================================THEME==================================================================\\
 
@@ -30,17 +25,7 @@ for (const numCell of numCells) {
 //===========================================================LOGGING==================================================================\\
 
 
-const signUp = document.getElementById('signUp');
-const signIp = document.getElementById('signIn');
-const overlaySign = document.getElementById('overlay-sign');
 
-signUp.addEventListener('click', () => {
-    signUp.classList.add("right-panel-active")
-})
-
-signIp.addEventListener('click', () => {
-    signIp.classList.add("left-panel-active")
-})
 
 
 //===========================================================GAME LOGIC==================================================================\\
@@ -72,15 +57,21 @@ const handleWin = (letter) => {
 };
 
 const checkGameStatus = () => {
-    const topLeft = cellDivs[0].classList[cellDivs[0].classList.length-1];
-    const topMiddle = cellDivs[1].classList[cellDivs[1].classList.length-1];
-    const topRight = cellDivs[2].classList[cellDivs[2].classList.length-1];
-    const middleLeft = cellDivs[3].classList[cellDivs[3].classList.length-1];
-    const middleMiddle = cellDivs[4].classList[cellDivs[4].classList.length-1];
-    const middleRight = cellDivs[5].classList[cellDivs[5].classList.length-1];
-    const bottomLeft = cellDivs[6].classList[cellDivs[6].classList.length-1];
-    const bottomMiddle = cellDivs[7].classList[cellDivs[7].classList.length-1];
-    const bottomRight = cellDivs[8].classList[cellDivs[8].classList.length-1];
+    if (cellDivs[0].classList.length > 2) {
+        var number = 2
+    } else {
+        var number = 1
+    }
+
+    const topLeft = cellDivs[0].classList[number];
+    const topMiddle = cellDivs[1].classList[number];
+    const topRight = cellDivs[2].classList[number];
+    const middleLeft = cellDivs[3].classList[number];
+    const middleMiddle = cellDivs[4].classList[number];
+    const middleRight = cellDivs[5].classList[number];
+    const bottomLeft = cellDivs[6].classList[number];
+    const bottomMiddle = cellDivs[7].classList[number];
+    const bottomRight = cellDivs[8].classList[number];
 
     // check winner
     if (topLeft && topLeft === topMiddle && topLeft === topRight) {
@@ -153,7 +144,7 @@ const handleCellClick = (e) => {
     document.getElementById("chk").disabled = true;
     const classList = e.target.classList;
 
-    if (!gameIsLive || classList[classList.length-1] === 'x' || classList[classList.length-1] === 'o') {
+    if (!gameIsLive || classList[classList.length - 1] === 'x' || classList[classList.length - 1] === 'o') {
         return;
     }
 

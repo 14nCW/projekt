@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: -20px 0 50px;
+    margin: 20px 20 20px;
     transition: background 0.2s linear;
 }
 
@@ -48,7 +48,12 @@ body.light {
 }
 
 .modeDiv {
-    right: -10%;
+    right: 2%;
+    height: 50%;
+}
+
+.logoutButton {
+    height: 50%;
 }
 
 .checkbox {
@@ -86,18 +91,12 @@ body.light {
     transform: translateX(24px);
 }
 
-.darkmode {
-    color: #f1c40f;
-}
 
-.lightmode {
-    color: #f39c12;
-}
 
 
 /* footer */
 
-.rightbar .footer {
+.footer {
     position: absolute;
     justify-content: center;
     left: 25%;
@@ -108,7 +107,7 @@ body.light {
 
 /* game */
 
-.rightbar .tictactoe-container {
+.tictactoe-container {
     text-align: center;
     align-items: center;
 }
