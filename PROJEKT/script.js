@@ -39,12 +39,13 @@ let xIsNext = true;
 // functions
 const letterToSymbol = (letter) => letter === 'x' ? xSymbol : oSymbol;
 
+
 const handleWin = (letter) => {
     gameIsLive = false;
     if (letter === 'x') {
-        statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
+        statusDiv.innerHTML = `X has won!`;
     } else {
-        statusDiv.innerHTML = `${letterToSymbol(letter)} has won!`;
+        statusDiv.innerHTML = `O has won!`;
     }
 };
 
@@ -136,7 +137,7 @@ const handleCellClick = (e) => {
     document.getElementById("chk").disabled = true;
     const classList = e.target.classList;
 
-    if (!gameIsLive || classList[number] === 'x' || classList[number] === 'o') {
+    if (!gameIsLive || classList[classList.length-1] === 'x' || classList[classList.length-1] === 'o') {
         return;
     }
 

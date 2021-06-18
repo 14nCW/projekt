@@ -12,7 +12,7 @@
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
             <i class="darkmode"></i>
-            <i class="lightmode"></i>
+            <i class="fas fa-sun"></i>
             <div class="ball">
             </div>
         </label>
