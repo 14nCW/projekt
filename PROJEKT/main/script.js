@@ -1,23 +1,21 @@
-
-
 //===========================================================THEME==================================================================\\
 
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
-	document.body.classList.toggle('light');
+    document.body.classList.toggle('light');
 });
 
 chk.addEventListener('change', () => {
-	document.getElementById('leftbar').classList.toggle('light');
+    document.getElementById('leftbar').classList.toggle('light');
 });
 
 const numCells = document.querySelectorAll('.game-cell');
 
 for (const numCell of numCells) {
     chk.addEventListener('change', () => {
-    numCell.classList.toggle('light');
-});
+        numCell.classList.toggle('light');
+    });
 }
 
 //===========================================================GAME LOGIC==================================================================\\
@@ -69,44 +67,20 @@ const checkGameStatus = () => {
     // check winner
     if (topLeft && topLeft === topMiddle && topLeft === topRight) {
         handleWin(topLeft);
-        cellDivs[0].classList.add('won');
-        cellDivs[1].classList.add('won');
-        cellDivs[2].classList.add('won');
     } else if (middleLeft && middleLeft === middleMiddle && middleLeft === middleRight) {
         handleWin(middleLeft);
-        cellDivs[3].classList.add('won');
-        cellDivs[4].classList.add('won');
-        cellDivs[5].classList.add('won');
     } else if (bottomLeft && bottomLeft === bottomMiddle && bottomLeft === bottomRight) {
         handleWin(bottomLeft);
-        cellDivs[6].classList.add('won');
-        cellDivs[7].classList.add('won');
-        cellDivs[8].classList.add('won');
     } else if (topLeft && topLeft === middleLeft && topLeft === bottomLeft) {
         handleWin(topLeft);
-        cellDivs[0].classList.add('won');
-        cellDivs[3].classList.add('won');
-        cellDivs[6].classList.add('won');
     } else if (topMiddle && topMiddle === middleMiddle && topMiddle === bottomMiddle) {
         handleWin(topMiddle);
-        cellDivs[1].classList.add('won');
-        cellDivs[4].classList.add('won');
-        cellDivs[7].classList.add('won');
     } else if (topRight && topRight === middleRight && topRight === bottomRight) {
         handleWin(topRight);
-        cellDivs[2].classList.add('won');
-        cellDivs[5].classList.add('won');
-        cellDivs[8].classList.add('won');
     } else if (topLeft && topLeft === middleMiddle && topLeft === bottomRight) {
         handleWin(topLeft);
-        cellDivs[0].classList.add('won');
-        cellDivs[4].classList.add('won');
-        cellDivs[8].classList.add('won');
     } else if (topRight && topRight === middleMiddle && topRight === bottomLeft) {
         handleWin(topRight);
-        cellDivs[2].classList.add('won');
-        cellDivs[4].classList.add('won');
-        cellDivs[6].classList.add('won');
     } else if (topLeft && topMiddle && topRight && middleLeft && middleMiddle && middleRight && bottomLeft && bottomMiddle && bottomRight) {
         gameIsLive = false;
         statusDiv.innerHTML = 'Game is tied!';
@@ -137,7 +111,7 @@ const handleCellClick = (e) => {
     document.getElementById("chk").disabled = true;
     const classList = e.target.classList;
 
-    if (!gameIsLive || classList[classList.length-1] === 'x' || classList[classList.length-1] === 'o') {
+    if (!gameIsLive || classList[classList.length - 1] === 'x' || classList[classList.length - 1] === 'o') {
         return;
     }
 
