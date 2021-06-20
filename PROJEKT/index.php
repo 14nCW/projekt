@@ -13,7 +13,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         header("Location: ../main/tytulowa.php");
     } else {
         $_SESSION['zalogowano'] = false;
-        header("Location: ../index/index.php");
+        header("Location: index.php");
     }
 
     mysqli_close($dbConnection);

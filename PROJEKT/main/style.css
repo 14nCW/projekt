@@ -11,7 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: rgb(37, 37, 37);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
